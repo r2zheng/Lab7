@@ -49,7 +49,9 @@ router.setState = function(state,entry) {
 }
   
 window.onpopstate = (event) => {
-  setPage(event.state.page,event.state.entry,false);
+  let page = event.state ? event.state.page : "";
+  let entry = event.state ? event.state.entry : null;
+  setPage(page,entry,false);
 }
   /**
    * - There are three states that your SPA app will have
