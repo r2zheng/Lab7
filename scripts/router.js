@@ -4,7 +4,7 @@ export const router = {};
 const body = document.querySelector("body");
 const main = document.querySelector("main");
 const title = document.querySelector("header > h1");
-
+const loc = window.location.toString();
 function insertAfter(newobj, oldobj) {
   oldobj.parentNode.insertBefore(newobj, oldobj.nextSibling);
 }
@@ -17,7 +17,6 @@ function setTitle(newTitle){
 function setPage(state,entry,hist){
   body.className = state;
   let newTitle = "Journal Entries";
-  let loc = window.location;
   //let location = window.location.origin;
   switch(state) {
     case "settings":
