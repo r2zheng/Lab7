@@ -17,13 +17,14 @@ function setTitle(newTitle){
 function setPage(state,entry,hist){
   body.className = state;
   let newTitle = "Journal Entries";
+  let loc = window.location.origin;
   //let location = window.location.origin;
   switch(state) {
     case "settings":
       newTitle = "Settings";
       setTitle(newTitle);
       if (hist)
-        history.pushState({page: state},"Settings","#settings");
+        history.pushState({page: state},"Settings",loc+"#settings");
       break;
     case "single-entry":
       document.querySelector("entry-page").remove();
@@ -33,12 +34,12 @@ function setPage(state,entry,hist){
       newEntry.entry = entry;
       insertAfter(newEntry,main);
       if(hist)
-        history.pushState({page: state,entry},newTitle,"#entry"+entry.index);
+        history.pushState({page: state,entry},newTitle,loc+"#entry"+entry.index);
       break;
     case "": // home page
       setTitle(newTitle);
       if(hist)
-        history.pushState({page: state},newTitle,"/");
+        history.pushState({page: state},newTitle,loc);
         
       break;
   }
