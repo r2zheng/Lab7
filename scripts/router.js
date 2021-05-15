@@ -4,7 +4,8 @@ export const router = {};
 const body = document.querySelector("body");
 const main = document.querySelector("main");
 const title = document.querySelector("header > h1");
-const loc = window.location.toString();
+
+const loc = window.location.href;
 function insertAfter(newobj, oldobj) {
   oldobj.parentNode.insertBefore(newobj, oldobj.nextSibling);
 }
