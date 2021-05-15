@@ -18,7 +18,7 @@ function setTitle(newTitle){
 function setPage(state,entry,hist){
   body.className = state;
   let newTitle = "Journal Entries";
-  
+
   switch(state) {
     case "settings":
       newTitle = "Settings";
@@ -36,7 +36,7 @@ function setPage(state,entry,hist){
       if(hist)
         history.pushState({page: state,entry},newTitle,loc+"#entry"+entry.index);
       break;
-    case "": // home page
+    default: // home page
       setTitle(newTitle);
       if(hist)
         history.pushState({page: state},newTitle,loc);

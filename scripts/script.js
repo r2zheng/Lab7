@@ -5,7 +5,6 @@ const settingBt = document.querySelector("header > img");
 const homeBt = document.querySelector("header > h1");
 settingBt.onclick = () => {router.setState("settings");};
 homeBt.onclick = () => {router.setState("");};
-history.pushState({page: ""},"Journal Entries",window.location.href); // record the first page
 // Make sure you register your service worker here too
 
 document.addEventListener('DOMContentLoaded', () => {
