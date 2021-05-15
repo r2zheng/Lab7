@@ -18,7 +18,7 @@ function setTitle(newTitle){
 function setPage(state,entry,hist){
   body.className = state;
   let newTitle = "Journal Entries";
-  //let location = window.location.origin;
+  
   switch(state) {
     case "settings":
       newTitle = "Settings";
