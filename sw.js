@@ -2,9 +2,9 @@
 
 // You will need 3 event listeners:
 //   - One for installation
-/*var CACHE_NAME = 'my-site-cache-v1';
-var urlsToCache = [
-  'https://cse110lab6.herokuapp.com/entries'
+let CACHE_NAME = 'my-site-cache-v1';
+let URLs = [
+    'https://cse110lab6.herokuapp.com/entries'
 ];
 
 
@@ -13,30 +13,28 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
+          console.log("Install");
+        return cache.addAll(URLs);
       })
   );
 }); 
 //   - One for activation ( check out MDN's clients.claim() for this step )
 self.addEventListener('activate', event => {
-  event.waitUntil(clients.claim());
+    console.log("activate");
+    event.waitUntil(clients.claim());
 });
 
 //   - One for fetch requests
-self.addEventListener('fetch', function(event) {
+/*self.addEventListener('fetch', function(event) {
     event.respondWith(
       caches.match(event.request)
         .then(function(response) {
-          // Cache hit - return response
-          if (response) {
-            return response;
-          }
-          return fetch(event.request);
+            console.log("fetch");
+            if (response) {
+                return response;
+            }
+            return fetch(event.request);
         }
       )
     );
-  });
-
-
-*/
+});*/
