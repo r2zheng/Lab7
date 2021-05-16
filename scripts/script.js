@@ -1,4 +1,15 @@
 // script.js
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
 
 import { router } from './router.js'; // Router imported so you can use it to manipulate your SPA app here
 const settingBt = document.querySelector("header > img");
