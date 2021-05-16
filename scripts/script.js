@@ -1,7 +1,7 @@
 // script.js
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+    navigator.serviceWorker.register('/Lab7/sw.js').then(function(registration) {
       // Registration was successful
       console.log('ServiceWorker registration successful with scope: ', registration.scope);
     }, function(err) {
@@ -10,6 +10,23 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
+
+// if ('serviceWorker' in navigator) {
+//   navigator.serviceWorker.register('/Lab7/sw.js', { scope: '/Lab7/' }).then(function(reg) {
+
+//     if(reg.installing) {
+//       console.log('Service worker installing');
+//     } else if(reg.waiting) {
+//       console.log('Service worker installed');
+//     } else if(reg.active) {
+//       console.log('Service worker active');
+//     }
+
+//   }).catch(function(error) {
+//     // registration failed
+//     console.log('Registration failed with ' + error);
+//   });
+// }
 
 import { router } from './router.js'; // Router imported so you can use it to manipulate your SPA app here
 const settingBt = document.querySelector("header > img");

@@ -71,3 +71,47 @@ self.addEventListener('fetch', function(event) {
       })
     );
 });
+
+// self.addEventListener('install', function(event) {
+//   event.waitUntil(
+//     caches.open('v1').then(function(cache) {
+//       return cache.addAll([
+//         '/Lab7/',
+//         '/Lab7/index.html',
+//         '/Lab7/style.css',
+//         '/Lab7/settings.svg',
+//         '/Lab7/scripts/router.js',
+//         '/Lab7/scripts/script.js',
+//         '/Lab7/images/lab.jpg',
+//         '/Lab7/images/mountains.jpg',
+//         '/Lab7/images/sky.jpg',
+//         '/Lab7/components/entry-page.js',
+//         '/Lab7/components/journal-entry.js'
+//       ]);
+//     })
+//   );
+// });
+
+// self.addEventListener('fetch', function(event) {
+//   event.respondWith(caches.match(event.request).then(function(response) {
+//     // caches.match() always resolves
+//     // but in case of success response will have value
+//     if (response !== undefined) {
+//       return response;
+//     } else {
+//       return fetch(event.request).then(function (response) {
+//         // response may be used only once
+//         // we need to save clone to put one copy in cache
+//         // and serve second one
+//         let responseClone = response.clone();
+        
+//         caches.open('v1').then(function (cache) {
+//           cache.put(event.request, responseClone);
+//         });
+//         return response;
+//       }).catch(function () {
+//         return caches.match('/Lab7/images/mountains.jpg');
+//       });
+//     }
+//   }));
+// });
