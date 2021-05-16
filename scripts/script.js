@@ -1,7 +1,7 @@
 // script.js
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/Lab7/sw.js').then(function(registration) {
+    navigator.serviceWorker.register('./sw.js').then(function(registration) {
       // Registration was successful
       console.log('ServiceWorker registration successful with scope: ', registration.scope);
     }, function(err) {
@@ -12,7 +12,7 @@ if ('serviceWorker' in navigator) {
 }
 
 // if ('serviceWorker' in navigator) {
-//   navigator.serviceWorker.register('/Lab7/sw.js', { scope: '/Lab7/' }).then(function(reg) {
+//   navigator.serviceWorker.register('sw.js', { scope: '/Lab7/' }).then(function(reg) {
 
 //     if(reg.installing) {
 //       console.log('Service worker installing');
