@@ -2,7 +2,7 @@
 
 // You will need 3 event listeners:
 //   - One for installation
-var CACHE_NAME = 'my-site-cache-v1';
+/*var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
   'https://cse110lab6.herokuapp.com/entries'
 ];
@@ -39,3 +39,4 @@ self.addEventListener('fetch', function(event) {
   });
 
 
+*/
