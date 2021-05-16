@@ -1,16 +1,14 @@
 // script.js
-/*if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('./sw.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      console.log('Registration Successful: ', registration.scope);
     }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
+      console.log('Registration Failed: ', err);
     });
   });
 }
-*/
+
 // if ('serviceWorker' in navigator) {
 //   navigator.serviceWorker.register('sw.js', { scope: '/Lab7/' }).then(function(reg) {
 
